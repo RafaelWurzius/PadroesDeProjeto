@@ -1,0 +1,34 @@
+MVC: Model-View-Controller
+    É focado em reutilizar código e separar conceitos em três partes:
+Model: Responsável por gerenciar e controlar os dados através de funcões e regras estabelecidas
+View: Responsável por apresentar as informações e dados ao usuário. Faz requisições ao Controller e entrega
+resultados ao usuário
+Controller: Responsável por intermediar as requisições feitas pela view para o Model e resultados trasmitidos 
+do Model para a View.
+    Trás segurança pois o Controller filtra os dados impedindo de chegar dados incorretos ao Model. Facilita o
+compreendimento do código e sua manutenção. Por ter separado em 3 partes, permite que varias pessoas trabalhem
+no mesmo projeto de forma independente o que pode economizar tempo.
+
+
+MVVM: Model View ViewModel. 
+    O MVVM foi projetado para remover praticamente todo o código GUI da camada de exibição, 
+usando funções de vinculação de dados no WPF 
+A View interage com a ViewModel por databinding, notificando a ocorrência de eventos e o disparo de comandos. 
+A ViewModel responde a esta notificação realizando alguma ação no modelo, como inserir ou consultar dados.
+
+
+MVP: Model View Presenter:
+    Conceitualmente, o MVVM e o MVP são idênticos, o que os diferencia é que o MVVM é específico para a arquitetura 
+do WPF e Silverlight e o MVP é independente de plataforma.
+View: apresenta os elementos da UI.
+Presenter (Interface): interface que define os eventos que o Presenter poderá responder. Serve unicamente para 
+desacoplar a View do Presenter.
+Presenter: responde as ações da UI controlando a interação entre a View e o Model.
+Model: comportamentos de negócio e gerenciamento de estado.
+Disponibiliza testes mais fáceis comparado ao MVP devido a grande separação entre o View e o Presenter.
+
+Microserviços
+    A aplicação é dividida em pequenos módulos monofuncionais, cada módulo tem seu próprio banco de dados e não os 
+compartilha com os demais módulos, desse modo, cada um pode ser alterado individualmente, sem interferir nos demais.
+Módulos conversam entre si através de APIs e são autonomos, ou seja, funcionam independente dos demais.
+    Facilita a integração à aplicações terceiras e otimiza o dimencionamento
